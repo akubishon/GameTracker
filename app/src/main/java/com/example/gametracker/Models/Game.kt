@@ -10,13 +10,14 @@ import kotlinx.android.parcel.Parcelize
 @Entity(tableName = "gameTable")
 data class Game(
     val title : String,
-    val day: Int,
-    val month: Int,
+    val platform: String,
     val year: Int,
-
+    val month: Int,
+    val day: Int,
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "id")
     var id: Long? = null
+
 ) : Parcelable
 
 
